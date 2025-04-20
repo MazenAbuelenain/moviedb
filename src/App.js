@@ -22,7 +22,7 @@ function App() {
         setState(prevState => {
           return { ...prevState, results: results }
         })
-      }).catch(error => console.log(error));
+      });
     }
   }
 
