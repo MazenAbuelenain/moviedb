@@ -12,7 +12,7 @@ function App() {
     selected: {}
   });
 
-  const apiUrl = "http://www.omdbapi.com/?i=tt3896198&apikey=cb12994e";
+  const apiUrl = "https://www.omdbapi.com/?i=tt3896198&apikey=cb12994e";
 
   const search = (e) => {
     if (e.key === "Enter"){
@@ -22,7 +22,7 @@ function App() {
         setState(prevState => {
           return { ...prevState, results: results }
         })
-      });
+      }).catch(error => console.log(error));
     }
   }
 

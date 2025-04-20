@@ -3,10 +3,10 @@ import Result from './Result'
 
 function Results({ results }) {
   return (
-    <section className='results'>
-        {results.map(result => {
-            <Result result={result} />
-        })}
+    <section className="results">
+        {results.map(result => (
+            <Result key={result.imdbID} result={result} />
+        ))}
     </section>
   )
 }
