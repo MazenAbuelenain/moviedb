@@ -160,3 +160,10 @@ section {
 .popup .content .close:hover {
   background: #223343;
 }
+
+.readMore {
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  display: -webkit-box;
+}

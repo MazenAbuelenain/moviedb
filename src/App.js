@@ -36,7 +36,7 @@ function App() {
   }
 
   const openPopUp = id => {
-    axios(apiUrl + "&i=" + id).then(({ data }) => {
+    axios(apiUrl + "&i=" + id + "&plot=full&r=json").then(({ data }) => {
       let result = data;
 
       setState(prevState => {
