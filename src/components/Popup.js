@@ -1,20 +1,9 @@
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState } from 'react'
 
 function Popup( { selected, closePopUp } ) {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen] = useState(false);
 
   const [showReadMore, setShowReadMore] = useState(false);
-
-  const ref = useRef(null);
-
-//   useEffect(() => {
-//     if(ref.current) {
-//         console.log(ref.current.scrollHeight, ref.current.clientHeight)
-//         setShowReadMore(
-//             ref.current.scrollHeight !== ref.current.clientHeight
-//         )
-//     }
-//   }, [])
 
     var showChar = 300;
     var c = selected.Plot + '';
@@ -29,13 +18,10 @@ function Popup( { selected, closePopUp } ) {
             <h2>{selected.Title} <span> {selected.Year} </span></h2>
             <p className='rating'>Rating: {selected.imdbRating}</p>
             <div className='plot'>
-                {/* <img src={selected.Poster} /> */}
+                <img src={selected.Poster} />
                 <p className={isOpen ? null : 'readMore'}>{c}
-                    <a className='readButton' onClick={() => setShowReadMore(!showReadMore)}> 
-                        {/* {showReadMore && (
-                            <button onClick={() => setIsOpen(!isOpen)}>{isOpen ? 'read less...' : 'read more...'}</button>
-                        )} */}
-                        {showReadMore ? 'less' : 'more'}
+                    <a className='readButton' onClick={() => setShowReadMore(!showReadMore)}>
+                        {showReadMore ? 'x' : 'more'}
                     </a>
                 </p> 
             </div>
