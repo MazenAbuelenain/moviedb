@@ -127,6 +127,7 @@ section {
   display: flex;
   flex-wrap: wrap;
   margin: 0px -15px 30px;
+  padding: 15px;
 }
 
 .popup .content .plot img {
@@ -137,7 +138,6 @@ section {
 
 .popup .content .plot p {
   flex: 1 1 50%;
-  padding: 15px;
 }
 
 .popup .content .close {
@@ -161,9 +161,15 @@ section {
   background: #223343;
 }
 
-.readMore {
-  line-clamp: 3;
+/* .readMore {
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
   display: -webkit-box;
+} */
+
+.readButton {
+  color: #4484c4;
+  cursor: pointer;
+  margin-left: 3px;
 }
